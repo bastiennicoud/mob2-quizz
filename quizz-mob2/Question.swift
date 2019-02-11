@@ -10,9 +10,9 @@ import Foundation
 
 class Question {
     
-    fileprivate let caption: String
-    fileprivate let answers: [String]
-    fileprivate let hint: String
+    public let caption: String
+    public let answers: [String]
+    public let hint: String
     
     fileprivate var correctAnswer: String
     

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Une question de test pour la forme ....Elle doit etre un peu grande" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csm-et-4hV" userLabel="Question">
-                                <rect key="frame" x="48" y="64" width="280" height="41"/>
+                                <rect key="frame" x="47.666666666666657" y="64" width="280" height="40.666666666666657"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" id="yZ5-YV-w3Y">
@@ -58,19 +58,38 @@
                                     <action selector="onHintButtonTouch" destination="BYZ-38-t0r" eventType="touchDown" id="h35-5q-Wbl"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="dOt-lm-zBG">
-                                <rect key="frame" x="54" y="776" width="268" height="2"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="dOt-lm-zBG">
+                                <rect key="frame" x="52.666666666666657" y="776" width="270" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="XeX-ob-H5c"/>
+                                </constraints>
                             </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question hint" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06M-G2-BYo">
+                                <rect key="frame" x="136.66666666666666" y="142.66666666666666" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7u-Ta-8Yy">
+                                <rect key="frame" x="165.66666666666666" y="746" width="44" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="jq5-D9-DH3" firstAttribute="top" secondItem="Csm-et-4hV" secondAttribute="bottom" constant="8" id="1EA-FK-9ej"/>
                             <constraint firstItem="pQ1-Mb-eQ0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3qe-87-tS5"/>
+                            <constraint firstItem="dOt-lm-zBG" firstAttribute="top" secondItem="E7u-Ta-8Yy" secondAttribute="bottom" constant="8" id="6HV-mj-11e"/>
                             <constraint firstItem="pQ1-Mb-eQ0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="733-06-lQp"/>
                             <constraint firstItem="jq5-D9-DH3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ein-I3-6bn"/>
                             <constraint firstItem="Csm-et-4hV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="HGd-qo-5tL"/>
+                            <constraint firstItem="06M-G2-BYo" firstAttribute="top" secondItem="jq5-D9-DH3" secondAttribute="bottom" constant="8" id="ZOi-u2-bgh"/>
+                            <constraint firstItem="dOt-lm-zBG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h5M-Ba-P8E"/>
+                            <constraint firstItem="06M-G2-BYo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lZE-A5-XhJ"/>
+                            <constraint firstItem="E7u-Ta-8Yy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mjG-y1-6Nw"/>
+                            <constraint firstItem="dOt-lm-zBG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="v33-IB-ypb"/>
                             <constraint firstItem="Csm-et-4hV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wjr-u9-NLk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -83,8 +102,10 @@
                         <outlet property="answerButton2" destination="pQ1-Mb-eQ0" id="E4R-xf-aEC"/>
                         <outlet property="answerButton3" destination="Wow-Vd-LYR" id="HXu-IA-gak"/>
                         <outlet property="hintButton" destination="jq5-D9-DH3" id="mJ0-qE-nOh"/>
+                        <outlet property="hintLabel" destination="06M-G2-BYo" id="7fZ-LX-bPb"/>
                         <outlet property="questionLabel" destination="Csm-et-4hV" id="5AK-hC-go6"/>
                         <outlet property="quizzProgressBar" destination="dOt-lm-zBG" id="bCU-mB-A63"/>
+                        <outlet property="scoreLabel" destination="E7u-Ta-8Yy" id="zWC-Jr-Qc1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

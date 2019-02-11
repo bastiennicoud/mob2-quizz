@@ -53,12 +53,12 @@ class QuizSession {
         }
     }
     
-    func checkAnswer(_ answer: String) {
+    func checkAnswer(_ answer: String) -> Bool {
         if questions[currentIndex].isCorrectAnswer(answer) {
             score.incrementScore()
-        } else {
-            score.decrementScore()
+            return true
         }
+        return false
     }
     
 }
