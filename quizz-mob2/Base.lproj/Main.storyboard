@@ -18,20 +18,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csm-et-4hV" userLabel="Question">
-                                <rect key="frame" x="47" y="74" width="280" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Une question de test pour la forme ....Elle doit etre un peu grande" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csm-et-4hV" userLabel="Question">
+                                <rect key="frame" x="48" y="64" width="280" height="41"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" id="yZ5-YV-w3Y">
+                                        <variation key="heightClass=compact" constant="520"/>
+                                        <variation key="heightClass=regular" constant="280"/>
+                                    </constraint>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gND-nH-hry">
+                                <rect key="frame" x="132" y="313" width="112" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                <state key="normal" title="Question 1"/>
+                                <connections>
+                                    <action selector="onAnswerTouch:" destination="BYZ-38-t0r" eventType="touchDown" id="TB5-Ue-xRH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQ1-Mb-eQ0">
+                                <rect key="frame" x="136" y="387" width="103" height="38"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <state key="normal" title="Question 2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wow-Vd-LYR">
+                                <rect key="frame" x="137" y="474" width="103" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <state key="normal" title="Question 3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jq5-D9-DH3">
+                                <rect key="frame" x="176.66666666666666" y="112.66666666666667" width="22" height="22.000000000000014"/>
+                                <connections>
+                                    <action selector="onHintButtonTouch" destination="BYZ-38-t0r" eventType="touchDown" id="h35-5q-Wbl"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="dOt-lm-zBG">
+                                <rect key="frame" x="54" y="776" width="268" height="2"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="jq5-D9-DH3" firstAttribute="top" secondItem="Csm-et-4hV" secondAttribute="bottom" constant="8" id="1EA-FK-9ej"/>
+                            <constraint firstItem="pQ1-Mb-eQ0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3qe-87-tS5"/>
+                            <constraint firstItem="pQ1-Mb-eQ0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="733-06-lQp"/>
+                            <constraint firstItem="jq5-D9-DH3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ein-I3-6bn"/>
+                            <constraint firstItem="Csm-et-4hV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="HGd-qo-5tL"/>
+                            <constraint firstItem="Csm-et-4hV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wjr-u9-NLk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zae-3A-6l2" appends="YES" id="mLx-Ua-2zz"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="answerButton1" destination="gND-nH-hry" id="lRH-gI-HVE"/>
+                        <outlet property="answerButton2" destination="pQ1-Mb-eQ0" id="E4R-xf-aEC"/>
+                        <outlet property="answerButton3" destination="Wow-Vd-LYR" id="HXu-IA-gak"/>
+                        <outlet property="hintButton" destination="jq5-D9-DH3" id="mJ0-qE-nOh"/>
+                        <outlet property="questionLabel" destination="Csm-et-4hV" id="5AK-hC-go6"/>
+                        <outlet property="quizzProgressBar" destination="dOt-lm-zBG" id="bCU-mB-A63"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="zae-3A-6l2">
+                    <connections>
+                        <action selector="onScreenPinch:" destination="BYZ-38-t0r" id="WLu-Qc-zhf"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
         </scene>
