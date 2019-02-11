@@ -19,6 +19,10 @@ class QuizSession {
         return questions.count
     }
     
+    public var questionIndex: Int {
+        return currentIndex
+    }
+    
     init() {
         questions = [
             Question(

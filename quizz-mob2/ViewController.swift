@@ -48,6 +48,7 @@ class ViewController: UIViewController {
     @IBAction func onScreenPinch(_ sender: UIPinchGestureRecognizer) {
         // Restart the game
         session = QuizSession()
+        quizzProgressBar.setProgress(Float(0), animated: true)
         nextOne()
     }
     
@@ -95,6 +96,9 @@ class ViewController: UIViewController {
             scoreLabel.isHidden = false
             
         }
+        
+        // Update progressbar
+        quizzProgressBar.setProgress(Float(session.questionIndex)/2, animated: true)
     }
     
     func answerButtons (isHidden: Bool) {

@@ -45,12 +45,18 @@
                                 <rect key="frame" x="136" y="387" width="103" height="38"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                 <state key="normal" title="Question 2"/>
+                                <connections>
+                                    <action selector="onAnswerTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqw-8E-y40"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wow-Vd-LYR">
                                 <rect key="frame" x="137" y="474" width="103" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                 <state key="normal" title="Question 3"/>
+                                <connections>
+                                    <action selector="onAnswerTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzS-tB-tfu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jq5-D9-DH3">
                                 <rect key="frame" x="176.66666666666666" y="112.66666666666667" width="22" height="22.000000000000014"/>
@@ -58,7 +64,7 @@
                                     <action selector="onHintButtonTouch" destination="BYZ-38-t0r" eventType="touchDown" id="h35-5q-Wbl"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="dOt-lm-zBG">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dOt-lm-zBG">
                                 <rect key="frame" x="52.666666666666657" y="776" width="270" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="XeX-ob-H5c"/>
